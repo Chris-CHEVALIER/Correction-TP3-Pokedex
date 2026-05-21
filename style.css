@@ -166,10 +166,20 @@ input:checked + .slider:before {
 }
 
 .pokemon-card {
-  width: 300px;
+  width: 150px;
   box-shadow: 3px 3px 6px;
   border-radius: 15px;
-  padding: 18px;
+  padding: 0 12px;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+}
+
+.pokemon-card:hover {
+  transform: scale(1.1);
+}
+
+.pokemon-name {
+  text-transform: capitalize;
 }
 
 #error-msg {
