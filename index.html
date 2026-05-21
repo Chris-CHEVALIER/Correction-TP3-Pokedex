@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="fr-FR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pokédex</title>
+    <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <a href="#">
+          <img src="./images/logo.png" alt="Logo" class="logo" />
+        </a>
+        <nav>
+          <ul>
+            <li><a href="#">Accueil</a></li>
+            <li><a href="#">À propos</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="empty-bloc">
+          <i class="fa-regular fa-sun"></i>
+          <i class="fa-solid fa-moon"></i>
+          <label class="switch">
+            <input type="checkbox" onclick="changeTheme()" />
+            <span class="slider round"></span>
+          </label>
+        </div>
+        <div class="burger-menu">
+          <ul>
+            <li><a href="#">Accueil</a></li>
+            <li><a href="#">À propos</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+        <div class="burger-icon" onclick="toggleBurgerMenu()">☰</div>
+      </header>
+      <div class="search-bloc">
+        <input
+          type="text"
+          name="search"
+          id="search"
+          class="search-bar"
+          placeholder="Rechercher un Pokémon"
+          oninput="searchByName(event)"
+        />
+      </div>
+      <p id="error-msg"></p>
+      <main id="pokemon-list"></main>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
